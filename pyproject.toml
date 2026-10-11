@@ -1,6 +1,6 @@
 [project]
 name = "quaternion-arithmetic"
-version = "0.1.0"
+version = "0.1.1"
 description = "Hamilton product, conjugate, norm, and rotation extraction for four-component real quaternions represented as tuples."
 requires-python = ">=3.10"
 dependencies = []
