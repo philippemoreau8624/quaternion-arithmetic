@@ -64,3 +64,10 @@ part of the result is returned.
   exactly zero; it is discarded. Length is preserved up to round-off.
 - `norm` uses `math.hypot`, so very large components (around 1e300) do not
   overflow the way a naive `sqrt(w*w + x*x + y*y + z*z)` would.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
